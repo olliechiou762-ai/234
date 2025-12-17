@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>水墨暈染轉場模擬 - 本地測試版</title>
+    <title>水墨暈染轉場模擬 - 網路圖片版</title>
     <!-- 載入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -100,10 +100,9 @@
         </nav>
     </header>
 
-    <!-- 圖片容器 - 改為使用本地相對路徑進行測試 -->
-    <!-- 注意：您必須在 index.html 旁邊建立一個名為 'images' 的資料夾，並放入 'image_1.jpg' -->
-    <div id="image-container" style="background-image: url('./images/image_1.jpg');">
-        <h1 class="text-white text-7xl font-black">本地測試圖 一</h1>
+    <!-- 圖片容器 - **已修正為 'image_1.jpg.jpg' 在根目錄的路徑** -->
+    <div id="image-container" style="background-image: url('https://olliechiou762-ai.github.io/234/image_1.jpg.jpg');">
+        <h1 class="text-white text-7xl font-black">產品展示圖 一</h1>
     </div>
 
     <!-- 轉場黑幕 (模擬墨水覆蓋層) -->
@@ -130,12 +129,12 @@
         const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
         const apiKey = ""; // LLM API Key Placeholder
 
-        // 圖片清單 (修改為本地相對路徑，請確保這些圖片檔案存在於 images/ 資料夾中)
+        // 圖片清單 (**已修正為 'image_x.jpg.jpg' 在根目錄的路徑**)
         const images = [
-            { url: 'https://olliechiou762-ai.github.io/234/images/img_1.jpg', title: '本地測試圖 一' },
-            { url: 'https://olliechiou762-ai.github.io/234/images/img_2.jpg', title: '本地測試圖 二' },
-            { url: 'https://olliechiou762-ai.github.io/234/images/img_3.jpg', title: '本地測試圖 三' },
-            { url: 'https://olliechiou762-ai.github.io/234/images/img_4.jpg', title: '本地測試圖 四' }
+            { url: 'https://olliechiou762-ai.github.io/234/image_1.jpg.jpg', title: '產品展示圖 一' },
+            { url: 'https://olliechiou762-ai.github.io/234/image_2.jpg.jpg', title: '產品展示圖 二' },
+            { url: 'https://olliechiou762-ai.github.io/234/image_3.jpg.jpg', title: '產品展示圖 三' },
+            { url: 'https://olliechiou762-ai.github.io/234/image_4.jpg.jpg', title: '產品展示圖 四' }
         ];
 
         let currentImageIndex = 0;
